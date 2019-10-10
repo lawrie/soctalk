@@ -30,7 +30,7 @@
 - Picorv32
 - Icicle
 - VexRiscv
-- lots of others
+- lots of others - see https://github.com/riscv/riscv-cores-list
 
 ## Why build a custom SOC using an FPGA
 
@@ -38,6 +38,7 @@
 - Exactly those peripherals that you want
 - As many of each peripheral as you want
 - Hardware implementations - no bit-banging
+- Simpler software device drivers
 - Much faster for some peripherals, such as LED panels
 - Complete control
 
@@ -59,13 +60,14 @@
 
 - Ice40 board with SDRAM
 - Scalable modular architecture with carrier boards
+- Compatible with Linux-capable BlackEdge core
 - HDMI support
 - Lots of I/O
 - .. but also runs on many other boards like TinyFPGA BX, iCEBreaker, Fomu, etc.
 
 ## Why SaxonSoc
 
-- Same author as VexRiscv (Charles Papon)
+- Same author as VexRiscv (Charles Papon, @Dolu990)
 - Written in SpinalHDL
 - Support for large number of peripherals
 - Support for many memory options
@@ -73,6 +75,7 @@
 - Banana Memory Bus and APB3 peripheral bus
 - Concise description of custom SOCs
 - Generation of BSPs
+- Built on experience from Murax and Briey SOCs
 
 ## SpinalHDL
 
@@ -98,12 +101,13 @@
 - Install SpinalTemplateSbt
 - Install SaxonSoc Bmb branch
 - Build SOC with make file
+- Can also use IDEs such as IntelliJ and Visual Studio
 
 ## SaxonSoc variants for Blackice board
 
 - BlackiceMxSocMinimal - with blinkAndEcho example
 - BlackiceMxSocSdram - with writeFlash utility
-- BlackiceMxSocXIP - run blinlkAndEcho from flash memory
+- BlackiceMxXIP - run blinlkAndEcho from flash memory
 - BlackiceMxZephyr - run Zephyr OS
 - BlackiceMxArduino - supports Arduino IDE, based on f32c/arduino
 - produce your own
