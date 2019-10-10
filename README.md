@@ -103,6 +103,36 @@
 - Build SOC with make file
 - Can also use IDEs such as IntelliJ and Visual Studio
 
+## SaxonSoc code extract
+
+```scala
+  //Add components
+  val ramA = BmbOnChipRamGenerator(0x80000000l)
+  val uartA = Apb3UartGenerator(0x10000)
+  val gpioA = Apb3GpioGenerator(0x00000)
+  val spiA = Apb3SpiMasterGenerator(0x20000)
+  val spiB = Apb3SpiMasterGenerator(0x30000)
+  
+  // Configure components
+  ramA.size.load(8 KiB)
+  ramA.hexInit.load("software/standalone/readSdcard/build/readSdcard.hex")
+
+  uartA.parameter load UartCtrlMemoryMappedConfig(
+    baudrate = 115200,
+    txFifoDepth = 32,
+    rxFifoDepth = 32
+  )
+
+  spiA.parameter load SpiMasterCtrlMemoryMappedConfig(
+    SpiMasterCtrlGenerics(
+      dataWidth = 8,
+      timerWidth = 32,
+      ssWidth = 1
+    )
+  )
+  
+```
+
 ## SaxonSoc variants for Blackice board
 
 - BlackiceMxSocMinimal - with blinkAndEcho example
