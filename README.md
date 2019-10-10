@@ -12,7 +12,7 @@
 - Open source Instruction Set Architecture (ISA)
 - Full-featured mature ISA
 - Supported by Linux
-- Supported by real-timer Operating Systems (e.g. Zephtyr)
+- Supported by real-time Operating Systems (e.g. Zephyr)
 - Increasing industry support
 - GCC and other tools support
 - Rival to ARM
@@ -28,7 +28,7 @@
 
 - Sifive
 - Picorv32
-- icicle
+- Icicle
 - VexRiscv
 - lots of others
 
@@ -71,7 +71,7 @@
 - Support for many memory options
 - Will run Linux
 - Banana Memory Bus and APB3 peripheral bus
-- Concise description of custome SOCs
+- Concise description of custom SOCs
 - Generation of BSPs
 
 ## SpinalHDL
