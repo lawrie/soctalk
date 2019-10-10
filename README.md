@@ -76,6 +76,7 @@
 - Concise description of custom SOCs
 - Generation of BSPs
 - Built on experience from Murax and Briey SOCs
+- SaxonSoc is currently experimental and may change
 
 ## SpinalHDL
 
@@ -130,7 +131,6 @@
       ssWidth = 1
     )
   )
-  
 ```
 
 ## SaxonSoc variants for Blackice board
